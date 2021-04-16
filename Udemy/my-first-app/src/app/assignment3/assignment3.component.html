@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr>
+      <p>Assignment 3</p>
+      <button (click)="onButtonPressed()">Details</button>
+      <p *ngIf="showPassword">Secret password = 'tuna'</p>
+      <div
+        *ngFor="let log of logs; let i = index"
+        [ngStyle]="{backgroundColor: i > 5 ? 'lightblue': 'transparent'}"
+        [ngClass]="{greaterThen5: i > 5}"
+      >{{log}}</div>
+    </div>
+  </div>
+</div>
